@@ -1,1 +1,22 @@
+# Como serão definidas as bolinhas (As VNFs, que no nosso trabalho são basicamente Máquinas virtuais e seus temanhos)
+# Nelas teremos definidas a quantidade de CPU, RAM e SSD que serão necessários.
+# Além disso estará atrelado a elas qual a quantidade de usuários que elas irão atender de forma indireta.
+# Esse quarto parâmetro é um peso baseado no que está descrito nos arquivos da 3GPP, de forma a sabermos quantos
+# usuários são atendidos por cada uma delas.
+
+#Primeiro, temos que definir o que são essas VNFs
+  def
+
+#Teremos valores diferentes para VNFs de Voz e de Vídeo
+#VNFs de Vídeo
+AMF_Vídeo
+SMF_Vídeo
+NRF_Vídeo
+NSSF_Vídeo
+AUSF_Vídeo
+NEF_Vídeo
+PCF_Vídeo
+UDM_Vídeo
+AF_Vídeo
+UPF_Vídeo
 
