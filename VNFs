@@ -4,19 +4,39 @@
 # Esse quarto parâmetro é um peso baseado no que está descrito nos arquivos da 3GPP, de forma a sabermos quantos
 # usuários são atendidos por cada uma delas.
 
-#Primeiro, temos que definir o que são essas VNFs
-  def
+# Definindo os Fatores de Scaling para serem utilizados na equação de usuários.
+import random
+alto = random.randrange(8, 11)
+moderado = random.randrange(6, 8)
+baixo = random.randrange(4, 6)
+upf_video = random.randrange(75, 77)
+upf_voz = random.randrange(46, 48)
 
-#Teremos valores diferentes para VNFs de Voz e de Vídeo
-#VNFs de Vídeo
-AMF_Vídeo
-SMF_Vídeo
-NRF_Vídeo
-NSSF_Vídeo
-AUSF_Vídeo
-NEF_Vídeo
-PCF_Vídeo
-UDM_Vídeo
-AF_Vídeo
-UPF_Vídeo
+# Definindo quais são as VNFs
+# Elas foram definidas com nomes diferentes mesmo tendo valores iguais porque iremos printar o nome delas em outro lugar
+# VNFs de Vídeo
+AMF_video = [6, 6, 12, alto]
+SMF_video = [6, 6, 12, alto]
+PCF_video = [3, 6, 12, moderado]
+UDM_video = [12, 24, 60, baixo]
+AF_video = [12, 24, 24, moderado]
+NEF_video = [6, 6, 12, baixo]
+AUSF_video = [12, 24, 60, moderado]
+NSSF_video = [6, 6, 12, baixo]
+NRF_video = [6, 6, 12, moderado]
+UPF_video = [48, 78, 168, upf_video]
 
+#VNFs de Voz
+AMF_voz = [6, 6, 12, alto]
+SMF_voz = [6, 6, 12, alto]
+PCF_voz = [3, 6, 12, moderado]
+UDM_voz = [12, 24, 60, baixo]
+AUSF_voz = [12, 24, 60, moderado]
+NSSF_voz = [6, 6, 12, baixo]
+NRF_voz = [6, 6, 12, moderado]
+UPF_voz = [30, 54, 72, upf_voz]
+
+#Definindo a slice de vídeo
+eMBBvideo = [AMF_video, SMF_video, UPF_video, PCF_video, UDM_video, AF_video, NEF_video, AUSF_video, NSSF_video ,NRF_video]
+#Definindo a slice de voz
+eMBBvoz = [AMF_voz, SMF_voz, UPF_voz, PCF_voz, UDM_voz, AUSF_voz, NSSF_voz ,NRF_voz]
